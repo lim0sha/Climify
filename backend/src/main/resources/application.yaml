@@ -13,6 +13,20 @@ spring:
       host: localhost
       timeout: 1s
 
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    csrf:
+      enabled: false
+    try-it-out-enabled: true
+    filter: false
+    syntax-highlight:
+      activated: true
+
 logging:
   level:
     com.climify: DEBUG
