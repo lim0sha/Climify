@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  jmx:
+    enabled: false
+  output:
+    ansi:
+      enabled: always
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      timeout: 1s
+
+logging:
+  level:
+    com.climify: DEBUG
+#    root: DEBUG
+#    org.springframework: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
