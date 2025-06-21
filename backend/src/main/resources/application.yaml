@@ -12,6 +12,9 @@ spring:
       port: 6379
       host: localhost
       timeout: 1s
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 springdoc:
   api-docs:
