@@ -3,6 +3,8 @@ target/
 !backend/src/main/**/target/
 !backend/src/test/**/target/
 .env
+Climify.iml
+package-lock.json
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -37,3 +39,10 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Frontend
+npm
+out
+target
+frontend/build
+frontend/node_modules

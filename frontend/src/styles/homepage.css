@@ -1,0 +1,15 @@
+.homepage {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.homepage__title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
