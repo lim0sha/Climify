@@ -4,16 +4,18 @@
     align-items: center;
     justify-content: center;
     min-height: 200px;
+    padding: 2rem;
+    margin-top: 15rem;
 }
 
 .loader-text {
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 500;
     color: #333;
 }
 
-/* From Uiverse.io by satyamchaudharydev */
 .loader {
     display: block;
     --height-of-loader: 4px;

@@ -1,4 +1,5 @@
 .homepage {
+    font-family: 'Montserrat', sans-serif;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
