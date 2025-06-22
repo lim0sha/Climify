@@ -46,7 +46,7 @@ const WeatherPage = () => {
             <div className="weather-wrapper">
                 <div className="weather-card-container">
                     <div className="weather-card-shadow"></div>
-                        <WeatherCard data={weather} />
+                    <WeatherCard data={weather} />
                 </div>
             </div>
         </div>

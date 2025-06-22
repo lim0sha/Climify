@@ -1,4 +1,7 @@
 import React from 'react';
+import {toCelsium} from './WeatherCardConverter'
+import {mphToMs} from './WeatherCardConverter'
+import {mPaToMmHg} from './WeatherCardConverter'
 
 const WeatherCard = ({ data }) => {
     const current = data.currentConditions;
@@ -20,14 +23,14 @@ const WeatherCard = ({ data }) => {
     return (
         <div className="weather-card">
             <h2>{data.resolvedAddress}</h2>
-            <p>{today}</p>
-            <h1>{Math.round(((current.temp - 32) / 1.8) * 10) / 10}°C</h1>
-            <p>Feels like: {Math.round(((current.feelslike - 32) / 1.8) * 10) / 10}°C</p>
+            <h4>{today}</h4>
+            <h1>{toCelsium(current.temp)}°C</h1>
+            <p>Feels like {toCelsium(current.feelslike)}°C</p>
             <h4>{data.description}</h4>
             <div className="details">
                 <span>Humidity: {current.humidity}%</span>
-                <span>Wind: {Math.round(current.windspeed / 2.2355 * 10) / 10} m/s</span>
-                <span>Pressure: {Math.round(current.pressure * 0.75 * 10) / 10} mmHg</span>
+                <span>Wind: {mphToMs(current.windspeed)} m/s</span>
+                <span>Pressure: {mPaToMmHg(current.pressure)} mmHg</span>
             </div>
         </div>
     );
