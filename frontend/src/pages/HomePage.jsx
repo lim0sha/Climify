@@ -16,7 +16,7 @@ const HomePage = () => {
     return (
         <div className="homepage">
             <h1 className="homepage__title">Climify</h1>
-            <p className="homepage__subtitle">Instant weather forecasts.</p>
+            <p className="homepage__subtitle">Instant weather forecasts</p>
             <SearchBar
                 value={city}
                 onChange={setCity}
