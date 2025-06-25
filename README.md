@@ -79,7 +79,7 @@ Climify fetches and returns weather data from a [third-party API](https://www.vi
     npm start
     ```
 
-12. Open your browser and visit `http://localhost:3000` to see the application in action.
+12. Open your browser and visit `http://localhost:3000/climify` to see the application in action.
 
 ## API Documentation
 API documentation is available via Swagger UI at `http://localhost:8080/swagger-ui/index.html#/`.
