@@ -12,12 +12,10 @@ import java.time.Duration;
 @Service
 public class CacheService implements ICacheService {
 
-    private final RedisTemplate<String, WeatherResponse> redisTemplate;
     private final ValueOperations<String, WeatherResponse> valueOperations;
 
     @Autowired
     public CacheService(RedisTemplate<String, WeatherResponse> redisTemplate) {
-        this.redisTemplate = redisTemplate;
         this.valueOperations = redisTemplate.opsForValue();
     }
 
