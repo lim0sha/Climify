@@ -1,19 +1,21 @@
 package com.climify.Services;
 
-import com.climify.Client.WeatherApiClient;
+import com.climify.Client.Interfaces.IWeatherApiClient;
 import com.climify.Models.DTO.WeatherResponse;
 import com.climify.Models.Exceptions.WeatherNotFoundException;
+import com.climify.Services.Interfaces.ICacheService;
+import com.climify.Services.Interfaces.IWeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class WeatherService {
+public class WeatherService implements IWeatherService {
 
-    private final WeatherApiClient weatherApiClient;
-    private final CacheService cacheService;
+    private final IWeatherApiClient weatherApiClient;
+    private final ICacheService cacheService;
 
     @Autowired
-    public WeatherService(WeatherApiClient weatherApiClient, CacheService cacheService) {
+    public WeatherService(IWeatherApiClient weatherApiClient, ICacheService cacheService) {
         this.weatherApiClient = weatherApiClient;
         this.cacheService = cacheService;
     }

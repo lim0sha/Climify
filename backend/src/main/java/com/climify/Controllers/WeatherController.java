@@ -1,7 +1,7 @@
 package com.climify.Controllers;
 
 import com.climify.Models.DTO.WeatherResponse;
-import com.climify.Services.WeatherService;
+import com.climify.Services.Interfaces.IWeatherService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("climify/api/weather")
 public class WeatherController {
-    private final WeatherService weatherService;
+    private final IWeatherService weatherService;
 
     @Autowired
-    public WeatherController(WeatherService weatherService) {
+    public WeatherController(IWeatherService weatherService) {
         this.weatherService = weatherService;
     }
 
