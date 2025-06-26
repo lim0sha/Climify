@@ -1,5 +1,6 @@
 package com.climify.Client;
 
+import com.climify.Client.Interfaces.IWeatherApiClient;
 import com.climify.Models.DTO.WeatherResponse;
 import com.climify.Models.Exceptions.CityNotFoundException;
 import com.climify.Models.Exceptions.WeatherApiException;
@@ -8,7 +9,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class WeatherApiClient {
+public class WeatherApiClient implements IWeatherApiClient {
 
     private final RestTemplate restTemplate;
     private final String apiKey;

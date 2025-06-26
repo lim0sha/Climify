@@ -1,6 +1,7 @@
 package com.climify.Services;
 
 import com.climify.Models.DTO.WeatherResponse;
+import com.climify.Services.Interfaces.ICacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -9,14 +10,12 @@ import org.springframework.stereotype.Service;
 import java.time.Duration;
 
 @Service
-public class CacheService {
+public class CacheService implements ICacheService {
 
-    private final RedisTemplate<String, WeatherResponse> redisTemplate;
     private final ValueOperations<String, WeatherResponse> valueOperations;
 
     @Autowired
     public CacheService(RedisTemplate<String, WeatherResponse> redisTemplate) {
-        this.redisTemplate = redisTemplate;
         this.valueOperations = redisTemplate.opsForValue();
     }
 
