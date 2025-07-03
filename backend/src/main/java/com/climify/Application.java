@@ -17,7 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
 )
 @SpringBootApplication
 @ComponentScan({"com.climify.Controllers", "com.climify.Services", "com.climify.Configs", "com.climify.Client",
-        "com.climify.Models.Exceptions", "com.climify.Models.DTO"})
+        "com.climify.Models.Exceptions", "com.climify.Models.DTO", "com.climify.Middleware.RateLimiting", "com.climify.Middleware.RateLimiting.Interfaces"})
 public class Application {
     public static void main(String[] args) {
         Dotenv dotenv = Dotenv.configure().load();
